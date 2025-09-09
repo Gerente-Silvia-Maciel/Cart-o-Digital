@@ -1,12 +1,27 @@
-<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cartão Digital | Silvia Maciel</title>
-  <meta name="description" content="Cartão Digital Interativo de Silvia Maciel - Gerente e Consultora de Vendas da Rodrigues Colchões. Conforto e Qualidade para o seu Sono.">
+
+  <!-- SEO -->
+  <meta name="description" content="Cartão digital interativo de Silvia Maciel - Gerente e Consultora de Vendas da Rodrigues Colchões. Conforto e qualidade para o seu sono.">
+  <meta name="keywords" content="Rodrigues Colchões, Silvia Maciel, gerente, consultora de vendas, colchões, conforto, qualidade, sono, móveis, cartão digital, WhatsApp">
   <meta name="author" content="Rodrigues Colchões">
-  <meta name="keywords" content="Silvia Maciel, Rodrigues Colchões, Cartão Digital, Consultora de Vendas, Colchões, Móveis, Conforto, Qualidade, Sono">
+
+  <!-- Open Graph (Facebook, WhatsApp) -->
+  <meta property="og:title" content="Silvia Maciel | Rodrigues Colchões">
+  <meta property="og:description" content="Conforto e qualidade para o seu sono. Acesse o cartão digital da gerente Silvia Maciel.">
+  <meta property="og:image" content="https://i.supaimg.com/54f808c1-90a8-4146-8927-c10999c8a28c.jpg">
+  <meta property="og:url" content="https://gerente-silvia-maciel.github.io/Cart-o-Digital">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Silvia Maciel | Rodrigues Colchões">
+  <meta name="twitter:description" content="Conforto e qualidade para o seu sono.">
+  <meta name="twitter:image" content="https://i.supaimg.com/54f808c1-90a8-4146-8927-c10999c8a28c.jpg">
 
   <!-- Fontes e Ícones -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
@@ -30,8 +45,8 @@
       max-width: 420px;
       width: 100%;
       overflow: hidden;
-      animation: fadeIn 0.8s ease-in-out;
       border: 2px solid #1e40af;
+      animation: fadeIn 0.8s ease-in-out;
     }
 
     @keyframes fadeIn {
@@ -42,29 +57,29 @@
     .header {
       background: linear-gradient(135deg, #1e40af, #2563eb);
       color: white;
-      padding: 30px 20px 70px;
+      padding: 40px 20px 60px;
       text-align: center;
       position: relative;
     }
 
-    /* Logo com neon fixo */
+    /* Logo */
     .logo {
       width: 120px;
-      height: auto;
-      border-radius: 18px;
-      margin-bottom: 10px;
-      box-shadow: 0 0 10px #1e40af, 0 0 20px #2563eb, 0 0 40px #1e40af;
+      margin: 0 auto 10px;
+      display: block;
+      border-radius: 15px;
+      box-shadow: 0 0 10px #2563eb, 0 0 20px #1e40af, 0 0 30px #2563eb;
     }
 
+    /* Slogan */
     .slogan {
       font-size: 0.9rem;
-      font-weight: 400;
-      margin: 5px 0 15px;
-      color: #e2e8f0;
-      text-shadow: 0 0 8px rgba(37,99,235,0.6);
+      margin-bottom: 10px;
+      text-shadow: 0 0 5px #2563eb;
+      opacity: 0.9;
     }
 
-    /* Foto de perfil com neon pulsante */
+    /* Foto de perfil */
     .profile-photo {
       width: 120px;
       height: 120px;
@@ -126,7 +141,7 @@
       margin: 20px 0;
     }
 
-    /* Botões neon com efeito de clique */
+    /* Botões neon */
     .button {
       display: flex;
       align-items: center;
@@ -203,14 +218,10 @@
       color: #cbd5e1;
     }
 
-    /* QR Code Container */
-    #qrcode-container {
+    /* QR code oculto */
+    #qrCodeContainer {
+      margin-top: 15px;
       display: none;
-      margin-top: 20px;
-      text-align: center;
-    }
-    #qrcode {
-      margin: auto;
     }
   </style>
 </head>
@@ -219,7 +230,7 @@
   <div class="card">
     <div class="header">
       <img src="https://i.supaimg.com/70558322-639e-4592-8968-eef8ec529f86.jpg" alt="Logo Rodrigues Colchões" class="logo">
-      <p class="slogan">Conforto e Qualidade para o seu Sono</p>
+      <p class="slogan">Conforto e qualidade para o seu sono</p>
       <h1>SILVIA MACIEL</h1>
       <p>Gerente | Consultora de Vendas</p>
       <img src="https://i.supaimg.com/54f808c1-90a8-4146-8927-c10999c8a28c.jpg" alt="Foto de Silvia Maciel" class="profile-photo">
@@ -242,15 +253,12 @@
         <a href="https://maps.app.goo.gl/b8RZCH5f5RfthaHV8?g_st=ac" target="_blank" class="button">
           <i class="fas fa-map-marker-alt"></i> Minha Localização
         </a>
-        <a href="#" id="toggleQrCode" class="button">
+        <a href="#" id="qrButton" class="button">
           <i class="fas fa-qrcode"></i> Gerar QR Code
         </a>
       </div>
 
-      <!-- QR Code container -->
-      <div id="qrcode-container">
-        <canvas id="qrcode"></canvas>
-      </div>
+      <div id="qrCodeContainer"></div>
 
       <div class="social-media">
         <a href="https://linkedin.com/in/seu-perfil" target="_blank" aria-label="LinkedIn">
@@ -271,31 +279,23 @@
   </div>
 
   <!-- QR Code Script -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/qrious@4.0.2/dist/qrious.min.js"></script>
   <script>
-    window.addEventListener("DOMContentLoaded", () => {
-      const qrContainer = document.getElementById("qrcode-container");
-      const btnQr = document.getElementById("toggleQrCode");
-      let qrVisible = false;
-      let qr;
+    const qrButton = document.getElementById('qrButton');
+    const qrContainer = document.getElementById('qrCodeContainer');
+    let qrVisible = false;
+    const qr = new QRious({
+      element: document.createElement('canvas'),
+      value: 'https://gerente-silvia-maciel.github.io/Cart-o-Digital',
+      size: 180
+    });
 
-      btnQr.addEventListener("click", () => {
-        qrVisible = !qrVisible;
-        if (qrVisible) {
-          if (!qr) {
-            qr = new QRious({
-              element: document.getElementById("qrcode"),
-              size: 180,
-              value: "https://seu-site-hospedado.com" // troque pelo link real
-            });
-          }
-          qrContainer.style.display = "block";
-        } else {
-          qrContainer.style.display = "none";
-        }
-      });
+    qrContainer.appendChild(qr.element);
+
+    qrButton.addEventListener('click', () => {
+      qrVisible = !qrVisible;
+      qrContainer.style.display = qrVisible ? 'block' : 'none';
     });
   </script>
-
 </body>
 </html>
