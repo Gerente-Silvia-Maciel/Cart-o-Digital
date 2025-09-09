@@ -1,0 +1,301 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cartão Digital | Silvia Maciel</title>
+  <meta name="description" content="Cartão Digital Interativo de Silvia Maciel - Gerente e Consultora de Vendas da Rodrigues Colchões. Conforto e Qualidade para o seu Sono.">
+  <meta name="author" content="Rodrigues Colchões">
+  <meta name="keywords" content="Silvia Maciel, Rodrigues Colchões, Cartão Digital, Consultora de Vendas, Colchões, Móveis, Conforto, Qualidade, Sono">
+
+  <!-- Fontes e Ícones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .card {
+      background: #0f172a;
+      border-radius: 28px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.5);
+      max-width: 420px;
+      width: 100%;
+      overflow: hidden;
+      animation: fadeIn 0.8s ease-in-out;
+      border: 2px solid #1e40af;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .header {
+      background: linear-gradient(135deg, #1e40af, #2563eb);
+      color: white;
+      padding: 30px 20px 70px;
+      text-align: center;
+      position: relative;
+    }
+
+    /* Logo com neon fixo */
+    .logo {
+      width: 120px;
+      height: auto;
+      border-radius: 18px;
+      margin-bottom: 10px;
+      box-shadow: 0 0 10px #1e40af, 0 0 20px #2563eb, 0 0 40px #1e40af;
+    }
+
+    .slogan {
+      font-size: 0.9rem;
+      font-weight: 400;
+      margin: 5px 0 15px;
+      color: #e2e8f0;
+      text-shadow: 0 0 8px rgba(37,99,235,0.6);
+    }
+
+    /* Foto de perfil com neon pulsante */
+    .profile-photo {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 5px solid #fff;
+      position: absolute;
+      bottom: -60px;
+      left: 50%;
+      transform: translateX(-50%);
+      box-shadow:
+        0 0 10px #1e40af,
+        0 0 20px #2563eb,
+        0 0 30px #1e40af,
+        0 0 40px #2563eb;
+      animation: neonPulseProfile 2s infinite;
+    }
+
+    @keyframes neonPulseProfile {
+      0%, 100% {
+        box-shadow:
+          0 0 10px #1e40af,
+          0 0 20px #2563eb,
+          0 0 30px #1e40af,
+          0 0 40px #2563eb;
+      }
+      50% {
+        box-shadow:
+          0 0 20px #2563eb,
+          0 0 35px #1e40af,
+          0 0 50px #2563eb,
+          0 0 70px #1e40af;
+      }
+    }
+
+    .header h1 {
+      font-size: 1.9rem;
+      margin: 0;
+      font-weight: 700;
+      text-shadow: 0 0 10px rgba(0,0,0,0.4);
+    }
+
+    .header p {
+      font-size: 1rem;
+      margin-top: 8px;
+      opacity: 0.9;
+    }
+
+    .content {
+      padding: 80px 25px 30px;
+      text-align: center;
+      color: #e2e8f0;
+    }
+
+    .links-section {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin: 20px 0;
+    }
+
+    /* Botões neon com efeito de clique */
+    .button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #fff;
+      background: #1e40af;
+      position: relative;
+      box-shadow: 0 0 10px #1e40af,
+                  0 0 20px #2563eb,
+                  0 0 40px #1e40af;
+      transition: all 0.2s ease, transform 0.1s ease;
+      animation: neonPulse 2s infinite;
+    }
+
+    .button:hover {
+      background: #2563eb;
+      transform: translateY(-2px) scale(1.05);
+      box-shadow: 0 0 15px #2563eb,
+                  0 0 30px #1e40af,
+                  0 0 60px #2563eb;
+    }
+
+    .button:active {
+      transform: translateY(2px) scale(0.98);
+      box-shadow: 0 0 5px #1e40af,
+                  0 0 10px #2563eb,
+                  0 0 20px #1e40af;
+    }
+
+    @keyframes neonPulse {
+      0%, 100% {
+        box-shadow: 0 0 8px #1e40af,
+                    0 0 16px #2563eb,
+                    0 0 32px #1e40af;
+      }
+      50% {
+        box-shadow: 0 0 15px #2563eb,
+                    0 0 30px #1e40af,
+                    0 0 60px #2563eb;
+      }
+    }
+
+    .social-media {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      font-size: 1.6rem;
+      margin-top: 15px;
+    }
+
+    .social-media a {
+      color: #60a5fa;
+      transition: 0.3s;
+      text-shadow: 0 0 8px #2563eb;
+    }
+
+    .social-media a:hover {
+      color: #93c5fd;
+      transform: scale(1.2);
+      text-shadow: 0 0 12px #2563eb, 0 0 24px #1e40af;
+    }
+
+    .footer {
+      background: #1e293b;
+      padding: 15px;
+      text-align: center;
+      font-size: 0.85rem;
+      color: #cbd5e1;
+    }
+
+    /* QR Code Container */
+    #qrcode-container {
+      display: none;
+      margin-top: 20px;
+      text-align: center;
+    }
+    #qrcode {
+      margin: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <div class="header">
+      <img src="https://i.supaimg.com/70558322-639e-4592-8968-eef8ec529f86.jpg" alt="Logo Rodrigues Colchões" class="logo">
+      <p class="slogan">Conforto e Qualidade para o seu Sono</p>
+      <h1>SILVIA MACIEL</h1>
+      <p>Gerente | Consultora de Vendas</p>
+      <img src="https://i.supaimg.com/54f808c1-90a8-4146-8927-c10999c8a28c.jpg" alt="Foto de Silvia Maciel" class="profile-photo">
+    </div>
+
+    <div class="content">
+      <div class="links-section">
+        <a href="https://calendly.com/seu-usuario" target="_blank" class="button">
+          <i class="fas fa-calendar-alt"></i> Agendar Reunião
+        </a>
+        <a href="https://wa.me/5592984660282" target="_blank" class="button">
+          <i class="fab fa-whatsapp"></i> Chamar no WhatsApp
+        </a>
+        <a href="mailto:silvaniramaciel.sm@gmail.com" class="button">
+          <i class="fas fa-envelope"></i> Enviar E-mail
+        </a>
+        <a href="tel:+5592984660282" class="button">
+          <i class="fas fa-phone"></i> Ligar Agora
+        </a>
+        <a href="https://maps.app.goo.gl/b8RZCH5f5RfthaHV8?g_st=ac" target="_blank" class="button">
+          <i class="fas fa-map-marker-alt"></i> Minha Localização
+        </a>
+        <a href="#" id="toggleQrCode" class="button">
+          <i class="fas fa-qrcode"></i> Gerar QR Code
+        </a>
+      </div>
+
+      <!-- QR Code container -->
+      <div id="qrcode-container">
+        <canvas id="qrcode"></canvas>
+      </div>
+
+      <div class="social-media">
+        <a href="https://linkedin.com/in/seu-perfil" target="_blank" aria-label="LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://instagram.com/rodriguescolchoesoficial" target="_blank" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://m.facebook.com/rodriguescolchoesoficial/" target="_blank" aria-label="Facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer">
+      © Rodrigues Colchões | Cartão Digital Interativo
+    </div>
+  </div>
+
+  <!-- QR Code Script -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+  <script>
+    window.addEventListener("DOMContentLoaded", () => {
+      const qrContainer = document.getElementById("qrcode-container");
+      const btnQr = document.getElementById("toggleQrCode");
+      let qrVisible = false;
+      let qr;
+
+      btnQr.addEventListener("click", () => {
+        qrVisible = !qrVisible;
+        if (qrVisible) {
+          if (!qr) {
+            qr = new QRious({
+              element: document.getElementById("qrcode"),
+              size: 180,
+              value: "https://seu-site-hospedado.com" // troque pelo link real
+            });
+          }
+          qrContainer.style.display = "block";
+        } else {
+          qrContainer.style.display = "none";
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
